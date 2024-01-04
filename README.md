@@ -1,5 +1,5 @@
 # Impact Evaluation, Randomized Control trial for Micro Credit Program
-## Applying different impact evaluation methods to find the treatment effect for microcredit program/policy
+## Finding the impact of microcredit program/policy in regard to both program placement and program participation for women
 ### In this study we measure the impact of the micro-credit program applied randomly across villages. 
 #### The outcome variable in this study is the "lxptot" per capita expenditure
 #### Program placement is indicated by dummay variable "progvillf"
