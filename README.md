@@ -1,9 +1,16 @@
-##Impact Evaluation, Randomized Control trial for Micro Credit Program
-###Applying different impact evaluation methods to find the treatment effect for microcredit program/policy
-#### t test result to see the impact of the program for both treated and non treated by program placement in the villages for the outcome variable: lexptot  percpaita expeniture log form 
-![image](https://github.com/mshirzad414/Impact-Evaluation-Micro-Credit-Program/assets/140922484/8de4b926-fd7e-4607-9eee-23497d12a4c1)
+# Impact Evaluation, Randomized Control trial for Micro Credit Program
+## Applying different impact evaluation methods to find the treatment effect for microcredit program/policy
+### In this study we measure the impact of the micro-credit program applied randomly across villages. 
+#### The outcome variable in this study is the "lxptot" per capita expenditure
+#### Program placement is indicated by dummay variable "progvillf"
+#### program participation for women is indicated by dummy varaible "dfmfd"
+##### Source of Data: World Bank 
 
-#### Linear regression of program placement dummy on outcome variable along all other control varibles, 
+#### At the first stage, we want to see the statistic summary of the progfam placement across villages, hence we apply t test result to see the impact of the program for both treated and non treated by program placement in the villages for the outcome variable: lexptot  percpaita expeniture log form 
+![image](https://github.com/mshirzad414/Impact-Evaluation-Micro-Credit-Program/assets/140922484/8de4b926-fd7e-4607-9eee-23497d12a4c1)
+#### As shown, there is significant mean differnece among treated groups and non-treated groups
+
+#### At the second stage, we run Linear regression of program placement dummy on outcome variable along all other control varibles, 
 
 ![image](https://github.com/mshirzad414/Impact-Evaluation-Micro-Credit-Program/assets/140922484/5799eb48-9fd9-48a2-831e-e783a0ad7fb0)
 
