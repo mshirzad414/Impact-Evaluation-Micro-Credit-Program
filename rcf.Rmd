@@ -1,0 +1,74 @@
+---
+title: "Randmomzied Control Method , Mirocredit program, Develped by Mustafa Shirzad"
+output: html_document
+date: "2024-01-03"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(ggplot2)
+library(dplyr)
+library(stargazer)
+
+```
+
+```{r}
+rct <- read.csv("rct.csv")
+head(rct)
+```
+```{r}
+"showing the number of treated and non treated  by progarm placement for women "
+install.packages("vctrs")
+install.packages("broom")
+
+library(vctrs)
+library(broom)
+
+t_test_result <- t.test(lexptot ~ progvillf, data = rct)
+print(t_test_result)
+tidy_t_test <- tidy(t_test_result)
+
+tidy_t_test <- tidy_t_test %>%
+  dplyr::rename(`mean difference` = estimate, `control mean` = estimate1, `treated mean` = estimate2)
+# Print the table
+print(tidy_t_test)
+
+```
+```{r}
+install.packages("lmtest")
+library(lmtest)
+#run regression to see if program placement is significant
+model <-lm( lexptot ~ progvillf, data= rct)
+summary(model)
+#extend the mdoel
+model2 <- lm(lexptot ~ progvillf + sexhead + agehead + educhead + lnland + vaccess + pcirr + rice + wheat + milk + oil + egg, 
+             data = rct, 
+             weights = weight)
+summary(model2)
+# below result shows that program placement is not significant 
+```
+```{r}
+#capturing both program placement progvillf and progam particiaption dummy for women dfmfd
+model3 <- lm(lexptot ~ progvillf +  dfmfd + sexhead + agehead + educhead + lnland + vaccess + pcirr + rice + wheat + milk + oil + egg, 
+             data = rct, 
+             weights = weight)
+summary(model3)
+# it shows the program placement is not significant but program participation is significant for women 
+```
+```{r}
+# Impact of program participation for women in the placed villages
+
+model4 <- lm(lexptot ~ dfmfd + (1 | progvillf), data = subset(rct, progvillf == 1), weights = weight)
+summary(model4)
+# including other control covariates
+model5 <- lm(lexptot ~ dfmfd + (1 | progvillf) + sexhead + agehead + educhead + lnland + vaccess + pcirr + rice + wheat + milk + oil + egg, data = subset(rct, progvillf == 1), weights = weight)
+summary(model5)
+```
+```{r}
+# measuring spillover of the program
+model6 <- lm(lexptot ~ progvillf + (1 | dfmfd), data = subset(rct, dfmfd == 0), weights = weight)
+summary(model6)
+model7 <- lm(lexptot ~ progvillf + (1 | dfmfd) + sexhead + agehead + educhead + lnland + vaccess + pcirr + rice + wheat + milk + oil + egg,  data = subset(rct, dfmfd == 0), weights = weight)
+summary(model7)
+```
+
