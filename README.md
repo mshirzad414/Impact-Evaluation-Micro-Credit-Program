@@ -1,4 +1,4 @@
-##Impact-Evaluation-Micro-Credit-Program
+##Impact Evaluation, Randomized Control trial for Micro Credit Program
 ###Applying different impact evaluation methods to find the treatment effect for microcredit program/policy
 #### t test result to see the impact of the program for both treated and non treated by program placement in the villages for the outcome variable: lexptot  percpaita expeniture log form 
 ![image](https://github.com/mshirzad414/Impact-Evaluation-Micro-Credit-Program/assets/140922484/8de4b926-fd7e-4607-9eee-23497d12a4c1)
