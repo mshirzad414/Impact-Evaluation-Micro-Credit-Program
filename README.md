@@ -36,6 +36,6 @@ We control for other covariates in the analysis of the spillover effect. The res
 ![image](https://github.com/mshirzad414/Impact-Evaluation-Micro-Credit-Program/assets/140922484/b53532a4-f285-41bd-a291-9a6c741b310a)
 The above two regressions shows that there is no spillover effect observed in the program implementation
 
-## Summary: 
+## Summary:
 
 This study focuses on evaluating the impact of a microcredit program on per capita expenditure among women in villages. Using a randomized control trial, the study first analyzes program placement statistics through t-test results, finding a significant mean difference between treated and non-treated groups. Subsequently, a linear regression analysis is conducted to understand the relationship between program placement and the outcome variable while controlling for other variables. The study also investigates the spillover effect of the program, finding no significant impact on expenditure per capita for individuals who did not receive treatment. These findings suggest that while the microcredit program has a significant impact on treated groups, there is no observed spillover effect on non-treated individuals, highlighting the targeted effectiveness of the program.
